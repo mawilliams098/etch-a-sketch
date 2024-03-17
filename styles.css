@@ -1,7 +1,21 @@
+body {
+    display: flex;
+    /* Forcing the body to take up the entire viewport, eliminate auto margins */
+    margin: 0;
+    height: 100vh;
+}
+
 #container {
     display:flex;
     justify-content: center;
     align-items: center;
-    background-color: lightseagreen;
-    padding:100px;
+    flex-wrap: wrap;
+    height: 100vh;
 }
+
+.pixel {
+    background-color: pink;
+    border-style: solid;
+    width: 1%;
+    height: 1%;
+} 
