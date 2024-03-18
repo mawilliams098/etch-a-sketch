@@ -22,6 +22,10 @@ const rainbow = document.querySelector("#rainbow");
 
 resize.addEventListener("click", (event) => {
     let input = prompt("How many pixels would you like per side?");
+    if (parseInt(input) >= 100) {
+        alert("Sorry! Please choose a smaller dimension.")
+        return -1;
+    }
     let newDimension = (100 / parseFloat(input)).toFixed(2);
     pixels.forEach((pixel) => {
         pixel.style["height"] = newDimension + '%';
