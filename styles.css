@@ -16,7 +16,7 @@ body {
     gap: 20px;
 }
 
-#container {
+#canvas {
     display: flex; 
     flex-wrap: wrap;
     border-style: solid;

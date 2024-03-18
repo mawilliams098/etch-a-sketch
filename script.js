@@ -1,21 +1,31 @@
-const container = document.querySelector("#container");
+const canvas = document.querySelector("#canvas");
 
-for (let i = 0; i < 16; i++) {
-    for (let j = 0; j < 16; j++) {
-        const pixel = document.createElement("div");
-        pixel.setAttribute("class", "pixel");
-        container.appendChild(pixel);
+function addPixels(numPixels) {
+    for (let i = 0; i < numPixels; i++) {
+        for (let j = 0; j < numPixels; j++) {
+            const pixel = document.createElement("div");
+            pixel.setAttribute("class", "pixel");
+            canvas.appendChild(pixel);
+        }
+    }
+
+    const pixels = canvas.querySelectorAll(".pixel");
+
+    pixels.forEach((pixel) => {
+        pixel.addEventListener("mouseover", (event) => {
+            pixel.style["background-color"] = "lightcoral";
+        })
+    })
+}
+
+function removePixels() {
+    const canvas = document.querySelector("#canvas");
+    while (canvas.firstChild) {
+        canvas.removeChild(canvas.lastChild);
     }
 }
 
-const pixels = container.querySelectorAll(".pixel");
-
-pixels.forEach((pixel) => {
-    pixel.addEventListener("mouseover", (event) => {
-        pixel.style["background-color"] = "lightcoral";
-    })
-})
-
+addPixels(16);
 const resize = document.querySelector("#resize");
 const reset = document.querySelector("#reset");
 const rainbow = document.querySelector("#rainbow");
@@ -26,7 +36,13 @@ resize.addEventListener("click", (event) => {
         alert("Sorry! Please choose a smaller dimension.")
         return -1;
     }
-    let newDimension = (100 / parseFloat(input)).toFixed(2);
+
+    removePixels();
+    addPixels(parseInt(input));
+
+    let newDimension = (100 / parseFloat(input))
+
+    const pixels = canvas.querySelectorAll(".pixel");
     pixels.forEach((pixel) => {
         pixel.style["height"] = newDimension + '%';
         pixel.style["width"] = newDimension + '%';
@@ -35,6 +51,7 @@ resize.addEventListener("click", (event) => {
 })
 
 reset.addEventListener("click", (event) => {
+    const pixels = canvas.querySelectorAll(".pixel");
     pixels.forEach((pixel) => {
         pixel.style["background-color"] = "white";
     })
