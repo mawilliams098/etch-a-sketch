@@ -7,3 +7,11 @@ for (let i = 0; i < 16; i++) {
         container.appendChild(pixel);
     }
 }
+
+const pixels = container.querySelectorAll(".pixel");
+
+pixels.forEach((pixel) => {
+    pixel.addEventListener("mouseover", (event) => {
+        pixel.style["background-color"] = "lightcoral";
+    })
+})

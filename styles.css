@@ -17,6 +17,12 @@ body {
 } 
 
 .pixel {
+    /* 100 / 16 (16 pixels) = 6.25 */
     height: 6.25%;
     width: 6.25%
+
+}
+
+.pixel:hover {
+    background-color: lightcoral;
 }
