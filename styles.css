@@ -2,6 +2,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     /* Margin needs to be zero to force the body to be exactly the viewport size */
     margin: 0;
     height: 100vh;
@@ -11,8 +12,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
     gap: 20px;
-    flex-direction: column;
 }
 
 #container {
@@ -21,7 +22,7 @@ body {
     border-style: solid;
     height: 50vw;
     width: 50vw;
-    margin: 100px;
+    margin: 50px 100px 100px 100px;
 } 
 
 .pixel {
