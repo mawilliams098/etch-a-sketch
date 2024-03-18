@@ -1,21 +1,25 @@
 body {
     display: flex;
-    /* Forcing the body to take up the entire viewport, eliminate auto margins */
+    justify-content: center;
+    align-items: center;
+    /* Margin needs to be zero to force the body to be exactly the viewport size */
     margin: 0;
     height: 100vh;
 }
 
 #container {
-    display:flex;
-    justify-content: center;
-    align-items: center;
+    display: flex; 
+    flex:1 1 0;
+    /* justify-content: center; */
+    /* align-items: center; */
     flex-wrap: wrap;
-    height: 100vh;
-}
+    border-style: solid;
+    padding:200px;
+    margin: 100px;
+} 
 
 .pixel {
-    background-color: pink;
     border-style: solid;
-    width: 1%;
-    height: 1%;
-} 
+    border-width: thin;
+    padding:3px;
+}
