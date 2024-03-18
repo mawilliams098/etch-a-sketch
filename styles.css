@@ -7,6 +7,14 @@ body {
     height: 100vh;
 }
 
+#button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+}
+
 #container {
     display: flex; 
     flex-wrap: wrap;
@@ -20,9 +28,4 @@ body {
     /* 100 / 16 (16 pixels) = 6.25 */
     height: 6.25%;
     width: 6.25%
-
-}
-
-.pixel:hover {
-    background-color: lightcoral;
 }
