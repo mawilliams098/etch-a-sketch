@@ -12,8 +12,11 @@ function addPixels(numPixels) {
     const pixels = canvas.querySelectorAll(".pixel");
 
     pixels.forEach((pixel) => {
+        let pixelOpacity = 0.1;
         pixel.addEventListener("mouseover", (event) => {
-            pixel.style["background-color"] = "lightcoral";
+            pixelOpacity += 0.1;
+            pixel.style["background-color"] = "black";
+            pixel.style["opacity"] = pixelOpacity;
         })
     })
 }
@@ -56,3 +59,7 @@ reset.addEventListener("click", (event) => {
         pixel.style["background-color"] = "white";
     })
 })
+
+// rainbow.addEventListener("click", (event) => {
+
+// })
