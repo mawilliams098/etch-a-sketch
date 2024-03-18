@@ -59,7 +59,3 @@ reset.addEventListener("click", (event) => {
         pixel.style["background-color"] = "white";
     })
 })
-
-// rainbow.addEventListener("click", (event) => {
-
-// })
