@@ -15,3 +15,14 @@ pixels.forEach((pixel) => {
         pixel.style["background-color"] = "lightcoral";
     })
 })
+
+const resize = document.querySelector("#resize");
+resize.addEventListener("click", (event) => {
+    let input = prompt("How many pixels would you like per side?");
+    let newDimension = (100 / parseFloat(input)).toFixed(2);
+    pixels.forEach((pixel) => {
+        pixel.style["height"] = newDimension + '%';
+        pixel.style["width"] = newDimension + '%';
+        pixel.style["background-color"] = "white";
+    })
+})
