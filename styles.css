@@ -9,17 +9,14 @@ body {
 
 #container {
     display: flex; 
-    flex:1 1 0;
-    /* justify-content: center; */
-    /* align-items: center; */
     flex-wrap: wrap;
     border-style: solid;
-    padding:200px;
+    height: 50vw;
+    width: 50vw;
     margin: 100px;
 } 
 
 .pixel {
-    border-style: solid;
-    border-width: thin;
-    padding:3px;
+    height: 6.25%;
+    width: 6.25%
 }
